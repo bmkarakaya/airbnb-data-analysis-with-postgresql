@@ -1,0 +1,23 @@
+## The variety of queries can be increased and personalized according to the user's request and priority.
+
+
+---List of top 20 Airbnb hosts earning the most in Istanbul
+SELECT id, listing_url, name, 30 - availability_30 AS booked_out_30,
+CAST(price_clean * (30 - availability_30) AS decimal) AS estimated_revenue_30
+FROM listings ORDER BY estimated_revenue_30 DESC LIMIT 20;
+
+---The number of reviews containing the word 'dirty' in evaluations of hosts
+SELECT host_id, host_url, host_name, COUNT(*) AS num_of_dirty_reviews 
+FROM reviews
+INNER JOIN listings ON reviews.listing_id = listings.id
+WHERE comments LIKE '%dirty%'
+GROUP BY host_id, host_url, host_name 
+ORDER BY num_of_dirty_reviews DESC;
+
+---The number of reviews containing the word 'perfect' in evaluations of hosts
+SELECT host_id, host_url, host_name, COUNT(*) AS num_of_perfect_reviews 
+FROM reviews
+INNER JOIN listings ON reviews.listing_id = listings.id
+WHERE comments LIKE '%nice%'
+GROUP BY host_id, host_url, host_name 
+ORDER BY num_of_perfect_reviews DESC;
