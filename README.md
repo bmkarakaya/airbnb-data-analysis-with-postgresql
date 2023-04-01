@@ -8,6 +8,7 @@ This repository contains SQL queries to analyze Airbnb data using a PostgreSQL d
 4. Data analysis
 
 ## Data Source
+You can download the data named listings and reviews for the desired region from the link below.
 http://insideairbnb.com/get-the-data/
 
 ## Contents
