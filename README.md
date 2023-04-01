@@ -11,7 +11,6 @@ This repository contains SQL queries to analyze Airbnb data using a PostgreSQL d
 http://insideairbnb.com/get-the-data/
 
 ## Contents
-- `data/`: Folder containing the downloaded data files
 - `python/`: Python scripts for importing the data to PostgreSQL
 - `queries/`: SQL queries for analyzing the data
 - `report/`: Folder containing the analysis report and visualizations
