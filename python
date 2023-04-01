@@ -34,7 +34,7 @@ conn = psycopg2.connect(
 engine = create_engine('postgresql+psycopg2://username:password@localhost:5432/project')
 
 # Load the CSV file into a pandas.DataFrame:
-df = pd.read_csv('C:/Users/burak/Downloads/reviews.csv1/reviews.csv')
+df = pd.read_csv('File path')
 
 # Write a pandas.DataFrame object to a PostgreSQL database.:
 df.to_sql('reviews', engine, if_exists='replace', index=False)
