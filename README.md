@@ -2,10 +2,13 @@
 
 This repository contains SQL queries to analyze Airbnb data using a PostgreSQL database. The steps taken in the project are as follows:
 
-1. Downloading the data from Airbnb
-2. Transferring the data to PostgreSQL with Python
-3. Data processing and cleaning
-4. Data analysis
+1.I downloaded the dataset from Airbnb's official website. The biggest challenge I encountered was transferring this dataset to a PSQL database. I solved this using a Python script I wrote. I connected to the database using the SQLAlchemy library and performed the import of CSV files.
+
+2.The dataset contains 72,332 records. Unnecessary columns that are irrelevant to the analysis were removed from the dataset, and rows with missing data in the remaining columns were deleted. The issue with currency symbols in the 'Price' column was resolved by creating a new column with numeric values.
+
+3.With an SQL query, I listed the top 20 Airbnb hosts with the highest monthly earnings in the Istanbul region. I also ranked the hosts who received the most "negative" feedback and those who received the most "perfect" feedback.
+
+4.With this work, Airbnb can provide pricing recommendations to hosts in Istanbul. Hosts with cleanliness issues in their homes can be alerted, and hosts who receive extremely positive feedback from users can be identified and rewarded.
 
 ## Data Source
 You can download the data named listings and reviews for the desired region from the link below.
